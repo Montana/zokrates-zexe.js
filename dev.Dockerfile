@@ -1,4 +1,4 @@
-FROM zokrates/zokrates:0.4.11 as builder
+FROM docker.pkg.github.com/eyblockchain/zokrates-zexe/zokrates_zexe:latest as builder
 
 # Actual application (for testing purposes)
 FROM node:12
