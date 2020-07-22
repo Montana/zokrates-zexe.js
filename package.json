@@ -24,8 +24,7 @@
   },
   "dependencies": {},
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
-    "access": "private"
+    "registry": "https://npm.pkg.github.com/"
   },
   "eslintConfig": {
     "extends": [
