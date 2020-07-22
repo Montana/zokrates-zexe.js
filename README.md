@@ -1,14 +1,14 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [zokrates-api](#zokrates-api)
+- [zokrates-zexe.js](#zokrates-zexejs)
   - [Instructions](#instructions)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# zokrates-api
+# zokrates-zexe.js
 
-This is a Node.js wrapper around [zoKrates-zexe](https://github.com/EYBlockchain/zokrates-zexe.js).
+This is a Node.js wrapper around [zokrates-zexe](https://github.com/EYBlockchain/zokrates-zexe.js).
 
 ## Instructions
 

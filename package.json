@@ -1,10 +1,10 @@
 {
-  "name": "@eyblockchain/zokrates.js",
-  "description": "This is a Node.js wrapper around ZoKrates.",
+  "name": "@eyblockchain/zokrates-zexe.js",
+  "description": "This is a Node.js wrapper around zokrates-zexe.",
   "license": "PUBLIC DOMAIN",
   "version": "0.0.0-semantically-released",
   "main": "index.js",
-  "repository": "https://github.com/EYBlockchain/zokrates.js.git",
+  "repository": "https://github.com/EYBlockchain/zokrates-zexe.js.git",
   "files": [
     "lib"
   ],
@@ -24,8 +24,8 @@
   },
   "dependencies": {},
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/",
-    "access": "public"
+    "registry": "https://npm.pkg.github.com/",
+    "access": "private"
   },
   "eslintConfig": {
     "extends": [
