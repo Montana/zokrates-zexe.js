@@ -1,7 +1,7 @@
 {
   "name": "@eyblockchain/zokrates-zexe.js",
   "description": "This is a Node.js wrapper around zokrates-zexe.",
-  "license": "PUBLIC DOMAIN",
+  "license": "CC0",
   "version": "0.1.0",
   "main": "index.js",
   "repository": "https://github.com/EYBlockchain/zokrates-zexe.js.git",
@@ -22,14 +22,24 @@
     "jest": "^24.9.0",
     "markdownlint-cli": "^0.18.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "line-reader": "^0.4.0"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "eslintConfig": {
     "extends": [
       "./node_modules/cod-scripts/eslint.js"
-    ]
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-restricted-syntax": "off",
+      "no-plusplus": "off"
+    },
+    "globals": {
+      "BigInt": true
+    }
   },
   "husky": {
     "hooks": {
