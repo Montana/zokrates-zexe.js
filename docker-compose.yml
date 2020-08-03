@@ -1,15 +1,12 @@
-version: '3'
+version: '3.5'
 
 services:
   library:
     build:
       context: ./
-      dockerfile: dev.Dockerfile
+      dockerfile: Dockerfile
     restart: on-failure
     volumes:
       - ./lib:/app/lib:delegated
       - ./code:/app/code:delegated
     command: tail -F /dev/null
-
-  ganache:
-    image: trufflesuite/ganache-cli
