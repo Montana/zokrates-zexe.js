@@ -2,7 +2,7 @@
   "name": "@eyblockchain/zokrates-zexe.js",
   "description": "This is a Node.js wrapper around zokrates-zexe.",
   "license": "CC0-1.0",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "index.js",
   "repository": "https://github.com/EYBlockchain/zokrates-zexe.js.git",
   "files": [
