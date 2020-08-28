@@ -1,20 +1,31 @@
 name: Node.js Package
+
 on:
   push:
     branches:
-      - 'master'
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
+      - uses: codfish/semantic-release-action@master
+        id: semantic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: echo ${{ steps.semantic.outputs.release-version }}
+      
       # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
           registry-url: 'https://npm.pkg.github.com'
-          # Defaults to the user or organization that owns the workflow file
-      - run: npm install
-      - run: npm publish
+
+      - name: publish npm package to github
+        if: steps.semantic.outputs.new-release-published == 'true'
+        run: |
+          npm install
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
