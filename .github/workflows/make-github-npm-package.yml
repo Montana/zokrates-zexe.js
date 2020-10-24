@@ -13,7 +13,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-          registry-url: 'https://npm.pkg.github.com'
 
       - run: npm install
 
@@ -22,11 +21,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - run: echo ${{ steps.semantic.outputs.release-version }}
-
-      - name: publish npm package to github
-        if: steps.semantic.outputs.new-release-published == 'true'
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
