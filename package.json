@@ -23,7 +23,9 @@
     "jest": "^24.9.0",
     "markdownlint-cli": "^0.18.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jsonfile": "^6.1.0"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
