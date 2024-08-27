@@ -1,9 +1,11 @@
-const compile = require('./lib/compile');
-const computeWitness = require('./lib/compute-witness');
-const extractVk = require('./lib/extract-vk');
-const generateProof = require('./lib/generate-proof');
-const setup = require('./lib/setup');
-const verify = require('./lib/verify');
+const {
+  compile,
+  computeWitness,
+  extractVk,
+  generateProof,
+  setup,
+  verify
+} = require('./lib');
 
 module.exports = {
   compile,
@@ -11,5 +13,5 @@ module.exports = {
   extractVk,
   generateProof,
   setup,
-  verify,
+  verify
 };
